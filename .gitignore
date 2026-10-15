@@ -1,0 +1,47 @@
+
+# Runtime data and generated outputs
+data/
+outputs/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local Python environments and credentials
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Editor settings
+.vscode/
+.idea/
+
+# Model weights and private datasets (keep these locally)
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+datasets/
+
+# UI sessions, experiment snapshots, and release artifacts
+ui_workspace/
+snapshots/
+dist/
+build/
+*.egg-info/
+
+# Media, backups, and temporary files
+*.mp4
+*.avi
+*.mov
+*.bak
+*.tmp
+*.log
+.ipynb_checkpoints/
+
+# Dataset-specific local configuration; shared examples remain public
+/configs/optical_drone_catalog.json

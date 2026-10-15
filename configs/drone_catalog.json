@@ -1,0 +1,7 @@
+{
+  "drones": [
+    {"global_drone_id": "drone_1", "class_id": 1, "class_name": "drone_1"},
+    {"global_drone_id": "drone_2", "class_id": 2, "class_name": "drone_2"},
+    {"global_drone_id": "drone_3", "class_id": 0, "class_name": "drone_3"}
+  ]
+}

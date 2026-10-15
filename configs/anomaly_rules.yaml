@@ -1,0 +1,10 @@
+history_size: 5
+area_ratio_min: 0.35
+area_ratio_max: 2.8
+center_jump_factor: 4.0
+center_jump_min_diagonal_ratio: 0.02
+aspect_ratio_min: 0.33
+aspect_ratio_max: 3.0
+fill_ratio_min: 0.4
+border_margin: 2
+periodic_interval: 50

@@ -1,0 +1,9 @@
+center_alpha: 0.7
+size_alpha: 0.4
+history_size: 5
+max_size_ratio: 2.0
+min_size_ratio: 0.5
+max_center_jump_factor: 4.0
+minimum_center_jump_pixels: 8.0
+min_component_area: 3
+save_raw_masks: false

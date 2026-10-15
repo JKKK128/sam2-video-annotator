@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "video_id": "video_a",
+  "video": "data/videos/video_a.mp4",
+  "objects": [
+    {"obj_id": 1, "name": "obj1", "global_drone_id": "drone_1", "class_id": 1, "class_name": "drone_1", "first_visible_frame": 203, "status": "active", "validated": true},
+    {"obj_id": 2, "name": "obj2", "global_drone_id": "drone_2", "class_id": 2, "class_name": "drone_2", "first_visible_frame": 205, "status": "active", "validated": true}
+  ],
+  "invalid_objects": []
+}

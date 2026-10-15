@@ -1,0 +1,83 @@
+sam2:
+  model_config: configs/sam2.1/sam2.1_hiera_t.yaml
+  checkpoint: ../sam2/checkpoints/sam2.1_hiera_tiny.pt
+  device: cuda
+
+input:
+  video: data/videos/input.mp4
+  frames_dir: data/frames/input
+  prompt_file: data/prompts/box_prompt.json
+  confirmed_frames_file:
+
+output:
+  output_dir: outputs/run_default
+  final_labels_dir:
+
+handoff:
+  prompt_priority: [mask, bbox]
+  min_mask_area: 1
+  min_bbox_area: 1
+  reject_critical_source_frame: true
+  require_valid_identity: true
+  allow_bbox_fallback: true
+  preview_context_frames: 2
+  manual_box:
+    window_name: "Select restart bbox"
+    allow_retry: true
+    allow_cancel: true
+  output:
+    save_masks: true
+    save_tracks: true
+    save_summary: true
+    render_preview_by_default: false
+
+frames:
+  jpeg_quality: 95
+
+tracking:
+  start_frame: 0
+  max_frames: 100
+  mask_threshold: 0.0
+  obj_id: 1
+
+bbox_stabilization:
+  center_alpha: 0.7
+  size_alpha: 0.4
+  history_size: 5
+  max_size_ratio: 2.0
+  min_size_ratio: 0.5
+  max_center_jump_factor: 4.0
+  minimum_center_jump_pixels: 8.0
+  min_component_area: 3
+  save_raw_masks: false
+
+# Review-only anomaly interval detection.  These settings do not alter SAM2
+# propagation, masks, or bounding boxes.
+anomaly_detection:
+  baseline_window: 5
+
+weights:
+  bbox_area_jump: 4.0
+  mask_area_jump: 2.0
+  center_shift: 1.5
+  aspect_ratio_jump: 1.0
+  edge_proximity: 0.5
+  empty_mask: 5.0
+  missing_record: 5.0
+  identity_error: 5.0
+
+bbox_area:
+  warning_ratio: 1.4
+  high_ratio: 1.8
+  critical_ratio: 2.5
+  weight: 4.0
+  critical_direct_trigger: true
+  update_baseline_on_anomaly: false
+
+intervals:
+  min_consecutive: 3
+  bbox_area_high_min_consecutive: 2
+  critical_single_frame_trigger: true
+  merge_gap: 2
+  recovery_frames: 3
+  restart_lookback: 20

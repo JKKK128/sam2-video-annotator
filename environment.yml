@@ -1,0 +1,13 @@
+name: sam2_env
+channels:
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - numpy
+  - pyyaml
+  - pytest
+  - opencv
+  - tqdm
+  - pip:
+      - gradio>=5,<6

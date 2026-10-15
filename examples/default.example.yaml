@@ -1,0 +1,13 @@
+sam2:
+  model_config: configs/sam2.1/sam2.1_hiera_t.yaml
+  checkpoint: ../sam2/checkpoints/sam2.1_hiera_tiny.pt
+  device: cuda
+
+handoff:
+  prompt_priority: [mask, bbox]
+  reject_critical_source_frame: true
+  allow_bbox_fallback: true
+
+tracking:
+  max_frames: 100
+  mask_threshold: 0.0

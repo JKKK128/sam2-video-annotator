@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "video_id": "video_a",
+  "objects": [
+    {"obj_id": 1, "frame_range": [203, 354], "segments": [{"start_frame": 203, "end_frame": 354, "source_type": "original", "tracks_path": "../outputs/video_a/obj1/tracks.jsonl"}]},
+    {"obj_id": 2, "frame_range": [205, 354], "segments": [{"start_frame": 205, "end_frame": 354, "source_type": "original", "tracks_path": "../outputs/video_a/obj2/tracks.jsonl"}]}
+  ],
+  "mapping_examples": {"video_a": {"obj1": "drone_1", "obj2": "drone_2"}, "video_b": {"obj1": "drone_1", "obj2": "drone_3"}}
+}
